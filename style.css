@@ -60,7 +60,7 @@ body {
 .scroll-link-home,
 .scroll-link-about,
 .scroll-link-connect,
-.scroll-link-certifiactes {
+.scroll-link-certificates {
     display: flex;
     align-items: center;
     gap: 20px;
@@ -72,11 +72,10 @@ body {
     color: white;
 }
 
-
-.scroll-link-home,
-.scroll-link-about,
-.scroll-link-connect,
-.scroll-link-certifiactes:hover {
+.scroll-link-home:hover,
+.scroll-link-about:hover,
+.scroll-link-connect:hover,
+.scroll-link-certificates:hover {
     color: white;
 }
 
@@ -84,7 +83,6 @@ body {
     display: flex;
     flex-wrap: wrap;
     font-family: "Exo 2", sans-serif;
-    ;
     font-weight: bold;
     text-decoration: none;
     color: var(--secondary-color);
