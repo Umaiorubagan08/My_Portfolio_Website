@@ -42,17 +42,15 @@
     <!-- Navbar_Section -->
     <div class="navbar">
         <div class="navbar__left">
-            <p><a href="#profile-text" class="scroll-link-home"> HOME </a> </p>
+            <p><a href="#profile-text" class="scroll-link-home"> HOME </a></p>
             <p><a href="#about-section" class="scroll-link-about"> ABOUT </a></p>
-            <p><a href="#connect_page" class="scroll-link-connect"> CONNECT </a></p>
-            <p><a href="#certificate_page" class="scroll-link-certifiactes"> CERTIFICATES </a></p>
+            <p><a href="#connect-page" class="scroll-link-connect"> CONNECT </a></p>
+            <p><a href="#certificates-page" class="scroll-link-certificates"> CERTIFICATES </a></p>
         </div>
-
         <div class="navbar__right">
-
-            <i class="fas fa-bell"></i>
-            <i class="fas fa-user" id="user-icon"></i>
-            <img src="./moon.png" id="icon">
+            <i class="fas fa-bell" title="Notification"></i>
+            <i class="fas fa-user" id="user-icon" title="User"></i>
+            <img src="./moon.png" id="icon" title="Mode Switch">
         </div>
     </div>
 
@@ -101,6 +99,19 @@
 
 
         <!--details section-->
+        <script>
+
+            // Ensure smooth scrolling behavior
+            document.querySelectorAll('.navbar__left p a').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        </script>
 
         <div class="details-section">
 
@@ -134,7 +145,7 @@
     </div>
 
     <!-- Portfolio_Section -->
-    <div class="portfolio-section">
+    <div class="portfolio-section" id="profile-text">
         <h2> My Creative <span class="highlight">Portfolio</span> Section</h2>
 
         <div class="project-container">
@@ -148,7 +159,7 @@
 
                 <h5>Tech Stack: <p class="para_format"> HTML, CSS, JavaScript </p>
                 </h5>
-                <div class="udemy_git"><a href="https://umaiorubagan08.github.io/updated-udemy-clone-webpage/"> <i
+                <div class="udemy_git"><a href="https://umaiorubagan08.github.io/Udemy_Clone_Interface/"> <i
                             class="fa-brands fa-github" style="color:crimson;"></i> </a></div>
             </div>
 
@@ -172,7 +183,7 @@
                     users on Telegram, providing responses and performing tasks based on our commands.</p>
                 <h5>Tech Stack: <p class="para_format"> Python, Libraries, IDE, API Keys </p>
                 </h5>
-                <div class="bot_git"><a href="https://umaiorubagan08.github.io/updated-udemy-clone-webpage/"> <i
+                <div class="bot_git"><a href="https://github.com/Umaiorubagan08/telegram_chat_bot"> <i
                             class="fa-brands fa-github" style="color:crimson;"></i> </a></div>
             </div>
 
@@ -198,7 +209,7 @@
                     interact with users, providing support and resources related to mental health and performing tasks
                     based on our commands.</p>
                 <h5>Tech Stack: <p class="para_format"> Python, Libraries, IDE, (NLP) Tools, Mental Health Resources</p>
-                    <div class="health_git"><a href="https://github.com/Umaiorubagan08/Python_mental_health_chat_bot.">
+                    <div class="health_git"><a href="https://umaiorubagan08.github.io/Python_mental_health_chat_bot./">
                             <i class="fa-brands fa-github" style="color:crimson;"></i> </a></div>
             </div>
 
@@ -210,8 +221,7 @@
                     drivers in parking their vehicles accurately.
                 </p>
                 <h5>Tech Stack: <p class="para_format"> Python, Libraries like OpenCV, IDE, AI and ML Tools </p>
-                    <div class="AI_git"><a
-                            href="https://github.com/naanmudhalvan-SI/PBL-NT-GP--20099-1682659072/tree/main/Final%20Deliverables/Project%20For%20AI%20Enabled%20Car%20Parking%20">
+                    <div class="AI_git"><a href="https://github.com/Umaiorubagan08/AI_Car_Parking_Project">
                             <i class="fa-brands fa-github" style="color:crimson;"></i> </a></div>
             </div>
 
@@ -245,7 +255,7 @@
                     Fitness tips, and AI technology in a visually appealing and organized manner on a web platform.
                 </p>
                 <h5>Tech Stack: <p class="para_format"> HTML 5, CSS 3 , VS Code, Bootstrap </p>
-                    <div class="blog_git"><a href="https://umaiorubagan08.github.io/Blog-/"> <i
+                    <div class="blog_git"><a href="https://umaiorubagan08.github.io/Blog_updated_version/"> <i
                                 class="fa-brands fa-github" style="color:crimson;"></i> </a></div>
             </div>
 
@@ -385,7 +395,7 @@
 
     <!--Certificates_Section-->
 
-    <div class="certificate-section">
+    <div class="certificate-section" id="certificates-page">
         <h2>CERTIFICATES</h2>
         <h4>Below are the Completed Certificates 👇</h4>
 
@@ -480,7 +490,7 @@
 
     <!-- Connect section -->
 
-    <div class="connect" id="connect_page">
+    <div class="connect" id="connect-page">
         <div class="connect_title">
             <h1> Take A <span class="name_design"> Coffee </span> And <span class="name_design"> Chat </span> With Me
             </h1>
